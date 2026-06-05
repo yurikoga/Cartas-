@@ -1,0 +1,123 @@
+/* Reset básico para garantir que nada quebre */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8E44AD; /* Cor de fundo roxa idêntica */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif; /* Fonte igual à imagem */
+}
+
+.main-container {
+    display: flex;
+    gap: 25px; /* Espaço entre os cartões */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que os cartões se empilhem em telas menores */
+    justify-content: center;
+}
+
+/* Estilo do Cartão */
+.card {
+    background-color: #FFFFFF;
+    width: 320px; /* Largura idêntica */
+    border-radius: 8px;
+    padding: 40px 25px 30px 25px; /* Padding ajustado para alinhamento */
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Área da Imagem Circular */
+.image-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 3px solid #E1D3EF; /* Borda interna levemente arroxeada */
+    position: relative;
+    /* Criando a sombra interna sutil que aparece na imagem */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+}
+
+/* Nome e Estrelas */
+h2 {
+    color: #8E44AD; /* Roxo igual ao fundo, mas mais escuro */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: capitalize; /* Garante o formato do texto */
+}
+
+.stars {
+    color: #8E44AD; /* Estrelas em roxo */
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Texto do Depoimento */
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555; /* Cinza suave */
+    margin-bottom: 30px;
+    padding: 0 5px; /* Pequeno padding nas laterais do texto */
+}
+
+/* Botões */
+.action-buttons {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between; /* Espaçamento idêntico */
+}
+
+button {
+    flex: 1; /* Botões dividem o espaço igualmente */
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Botão 'Read More' */
+.btn-read-more {
+    background-color: transparent;
+    color: #8E44AD;
+    border: 2px solid #E1D3EF; /* Borda leve arroxeada */
+}
+
+.btn-read-more:hover {
+    background-color: #f7f3fd;
+    border-color: #8E44AD;
+}
+
+/* Botão 'Subscribe' */
+.btn-subscribe {
+    background-color: #8E44AD; /* Fundo roxo */
+    color: #FFFFFF;
+    border: 2px solid #8E44AD;
+}
+
+.btn-subscribe:hover {
+    background-color: #6c3483; /* Roxo mais escuro no hover */
+    border-color: #6c3483;
+}
